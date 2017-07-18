@@ -1,0 +1,22 @@
+body{
+    /* background-color:black; */
+    /* background-image: url( http://i0.kym-cdn.com/photos/images/newsfeed/000/687/093/6a8.jpg);
+    background-size: cover */
+}
+h3{
+    display: inline;
+    
+}
+h1{
+    display: inline
+}
+h1.list{
+    clear: left;
+}
+button{
+    display:block;
+    clear:right
+}
+img{
+    border-left: 1px solid yellow
+}

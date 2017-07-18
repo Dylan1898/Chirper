@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="app/styles.css">
+    <title>Document</title>
+</head>
+<body ng-controller="postController">
+    <form ng-submit="clicker">
+    User: <input type="text" name="User" ng-model='new.chirp.user' required> 
+    Message: <input type="text" name="Message" ng-model='new.chirp.message'required><br>
+    <input type='submit'>
+    </form>
+    <h1 id="h1list">List of chirps</h1> 
+     <div ng-controller="allGetController" >
+         <div ng-repeat='chirps in allChirps'>   
+   
+    <p>USER: {{chirps.user}}</p>
+     <p>MESSAGE: {{chirps.message}} </p>
+    </div>
+</div>
+</body>
+</html>
