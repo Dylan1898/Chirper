@@ -7,16 +7,39 @@ h3{
     display: inline;
     
 }
-h1{
-    display: inline
+h1.h1list#list{
+    text-align: center;
+    margin:0 auto; 
 }
-h1.list{
-    clear: left;
-}
-button{
+ h1{
+    display: inline;
+    clear:right
+} 
+
+/* button{
     display:block;
     clear:right
-}
+} */
 img{
-    border-left: 1px solid yellow
+    border-left: 1px solid yellow;
+    -ms-transform-origin-x: 1em;
+    margin-right: 1em;
+    margin-left:10em;
+    margin-top:5em
+}
+#rows :nth-child(even){
+    background-color: lightblue;
+}
+#rows :nth-child(odd){
+    background-color: lightgray
+}
+form{
+    padding:1em
+}
+.homebut{
+    /* position:absolute;
+    top:70%;
+    left:50%; */
+    position: inherit
+    
 }

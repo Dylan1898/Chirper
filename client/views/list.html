@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="app/styles.css">
     <title>Document</title>
 </head>
-<body ng-controller="postController">
-    <form ng-submit="clicker">
-    User: <input type="text" name="User" ng-model='new.chirp.user' required> 
-    Message: <input type="text" name="Message" ng-model='new.chirp.message'required><br>
-    <input type='submit'>
+<body >
+    <div  ng-controller="allGetController">
+    <form>
+    User: <input type="text" name="User" placeholder="User" ng-model="user" required> 
+    Message: <input type="text" name="Message" placeholder="Message" ng-model="message" required><br>
+    <input type="button" value="submit" ng-click="insertdata()"/>
     </form>
-    <h1 id="h1list">List of chirps</h1> 
-     <div ng-controller="allGetController" >
-         <div ng-repeat='chirps in allChirps'>   
+    <h1 id= 'list'class="h1list">List of chirps</h1> 
+      <div id='rows'>
+          
+         <div   ng-repeat='chirps in allChirps' ng-click="goToSingle(chirps.id)" id={{chirp.id}}>   
    
-    <p>USER: {{chirps.user}}</p>
-     <p>MESSAGE: {{chirps.message}} </p>
-    </div>
+    <a href ='#single'><p ng-dblclick="id">USER: {{chirps.user}}</p>
+        
+     <p>MESSAGE: {{chirps.message}} </p></a>
+    </div> 
+      </div>
 </div>
 </body>
 </html>
