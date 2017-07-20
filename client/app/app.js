@@ -17,20 +17,18 @@ myApp.config(function ($routeProvider, $locationProvider) {
 });
 
 
-myApp.controller('oneController', function ($scope, $http, $location) {
-    var id= location.hash
-    console.log(location)
-    
-    // var newId = id.replace('#/single/')
-    // console.log(newId)
-    // var realId= id.split('/').pop
-    console.log(id)
-        $http.get("http://localhost:3000/api/chirps/" +id)
-            .then(function (response) {
-                $scope.allChirps = response.data;
-                console.log(location.hash)
-            })
-    })
+    // myApp.controller('oneController', function($scope, $routeParams, $http)
+    //      {
+    //         //Get ID out of current URL
+    //         var currentId = $routeParams.id;
+    //         console.log(currentId)
+    // $http.get("http://localhost:3000/api/chirps/" + currentId)
+    //     .then(function (response) {
+    //         $scope.thisChirp = response.data;
+    //         console.log(location.hash)
+    //         console.log(response.data)
+    //     })
+// })
 myApp.controller('allGetController', function ($scope, $http, $location) {
     $http.get("http://localhost:3000/api/chirps")
         .then(function (response) {
@@ -53,10 +51,33 @@ myApp.controller('allGetController', function ($scope, $http, $location) {
         $http.get('/api/chirps/')
             .then(function () {
                 $location.path('/single/' + id)
-                id=($location.path('/single/' + id))
+                id = ($location.path('/single/' + id))
             })
 
     }
-    
+
 
 });
+
+ myApp.controller('oneController', function($scope, $routeParams, $http)
+         {
+            //Get ID out of current URL
+            var currentId = $routeParams.id;
+            console.log(currentId)
+    $http.get("http://localhost:3000/api/chirps/" + currentId)
+        .then(function (response) {
+            $scope.thisChirp = response.data;
+            console.log(location.hash)
+            console.log(response.data)
+        })
+         });
+myApp.controller('deleteController', function($scope, $http) {    
+    console.log('dbl')
+         $scope.deleteSingle = function (id) {
+        $http.get('/api/chirps/')
+            .then(function () {
+                $location.path('/single/' + id)
+                id = ($location.path('/single/' + id))
+            })
+
+  }})

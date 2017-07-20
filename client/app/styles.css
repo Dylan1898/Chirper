@@ -1,45 +1,196 @@
 body{
-    /* background-color:black; */
-    /* background-image: url( http://i0.kym-cdn.com/photos/images/newsfeed/000/687/093/6a8.jpg);
-    background-size: cover */
+     /*background-color:black; */
+     background-color: rgba(255,255,255,0.1);
+     background-image: url( http://0.tqn.com/d/graphicssoft/1/7/l/G/5/SKS-Circles-16.png);
+    /*background-size: cover ;*/
+}     
+.box{
+    padding:.5% 5%
 }
-h3{
+h3#list{
+    text-align: center;
+    margin:0 auto;
+    color:#ffa500
+}
+.welcome{
     display: inline;
+    font-size: 3em;
+    color: #ffa500;
+
     
 }
-h1.h1list#list{
+
+h1.chirper{
+    margin:0 auto;
     text-align: center;
-    margin:0 auto; 
+    font-size: 10em;
+    color: #ffa500;
 }
- h1{
+ .title{
     display: inline;
-    clear:right
+    clear:right;
+    font-size: 8em 
 } 
 
 /* button{
     display:block;
     clear:right
 } */
+
+
+
+
 img{
-    border-left: 1px solid yellow;
+    border: 8px solid turquoise;
     -ms-transform-origin-x: 1em;
     margin-right: 1em;
     margin-left:10em;
-    margin-top:5em
+    margin-top:5em;
+    clear:both;
+                border-radius: 500px;
+
 }
-#rows :nth-child(even){
+/*#rows :nth-child(even){
     background-color: lightblue;
 }
 #rows :nth-child(odd){
     background-color: lightgray
+}*/
+p.user{
+    /*background-color: lightblue;*/
+    display: inline;
+    border-radius: 5px 5px;
+    color:#ffa500
+}
+p.message{
+    max-width: 80%;
+    color:#ffa500
+    
+   
+}
+.username{
+   background-color: rgba(175,238,238,0.7);
+   display:inline;
+   padding:.5%;
+       border-radius: 5px 5px;
+
+}
+.messagetext{
+    margin-left: 3%;
+    word-wrap: break-word;
+    background-color: white;
+    border-radius: 5px 5px;
+    padding: 1%;
+    background-color: rgba(175,238,238,0.7);
+            border-radius: 10px 10px;
+
+    
+}
+p{
+    font-size: 1.5em;
+    color:teal;
+    
+}
+div.chirp:hover{
+background-color: rgba(77, 182, 172,1)}
+div.chirp{
+     background-color: teal;
+    max-width: 60%;
+    margin:1% auto;
+    padding: 2%;
+    border-radius: 30px 10px;
+background-color: rgba(77, 182, 172,0.7);
+-webkit-transition: color 1s ease-in;
+                /*background-image: url(https://vignette3.wikia.nocookie.net/hexrblx/images/5/50/Wiki-background/revision/latest/scale-to-width-down/640?cb=20150222044922)*/
+
 }
 form{
-    padding:1em
+    padding:1em;
+    max-width: 90%;
+    border-radius: 30px 10px;
+    background-color: rgba(175,238,238,0.7);
+    margin: 0 auto;
+                /*background-image: url(https://vignette3.wikia.nocookie.net/hexrblx/images/5/50/Wiki-background/revision/latest/scale-to-width-down/640?cb=20150222044922)*/
+
 }
 .homebut{
     /* position:absolute;
     top:70%;
     left:50%; */
-    position: inherit
+    -webkit-transform-origin-x: 200px;
+    display: block;
+    margin-left: 65%;
+        border-radius: 30px 30px;
+        font-size: 2em;
+       background-color:rgba(175,238,238,1);
+       color: rgba(77, 182, 172,1)
+
+
     
+}
+div.home{
+    background-color: teal;
+    margin-top: 3em;
+    border-bottom: 4px solid turquoise;
+    border-top:4px solid turquoise
+
+}
+.greeting{
+    /*max-width: 50%;*/
+    float:right;
+    margin-right: 15%;
+    margin-top: 5%;
+        color: #ffa500;
+
+
+}
+input{
+    margin:1%
+}
+.input{
+    padding: 1em 1em;
+    background-color: teal;
+    text-align: center;
+    max-width: 80%;
+    margin: 1% auto;
+    border-radius: 30px 10px;
+    background-color: rgba(77, 182, 172,0.7);
+}
+.inputprompt{
+    display:inline
+}
+
+.submitbutton{
+    margin:1% -1%;
+    border-radius: 10px 10px;
+    padding: .8%;
+    font-size: 1.2em;
+    background-color: teal
+}
+.chirplist{
+    margin: 0 50%;
+    
+}
+h4{
+    float:right;
+}
+a:link{
+    text-decoration: none;
+}
+.singlechirp:hover{
+    background-color: rgba(77, 182, 172,1)
+}
+.singlechirp{
+    background-color: teal;
+    margin-top: 4%;
+    max-width: 80%;
+    margin:5% auto;
+    padding:2%;
+    border-radius: 30px 10px;
+    background-color: rgba(77, 182, 172,0.7);
+}
+.return{
+    text-align: center;
+    text-decoration: none;
+    color:#ffa500;
 }

@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html  lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="app/styles.css">
-    <title>Document</title>
-</head>
 <body>
-    <div ng-controller="oneController">
-        <p>USER: {{chirps.user}}</p>
-        <p>MESSAGE: {{chirps.message}}</p>
+    <div class='singlechirp' ng-controller="oneController">
+        <p class='user'>USER: </p><p class='username'>{{thisChirp.user}}</p>
+        <p class= 'message'>CHIRP!: </p>
+        <p class='messagetext'>{{thisChirp.message}}</p>
     </div>
-    
-</body>
-
-</html>
-
-
-
-single
+    <a href='#list'><p class='return' >Return to Recent Chirps</p></a>

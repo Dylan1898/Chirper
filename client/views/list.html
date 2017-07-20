@@ -1,29 +1,27 @@
-<!DOCTYPE html>
-<html  lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="app/styles.css">
-    <title>Document</title>
-</head>
-<body >
-    <div  ng-controller="allGetController">
-    <form>
-    User: <input type="text" name="User" placeholder="User" ng-model="user" required> 
-    Message: <input type="text" name="Message" placeholder="Message" ng-model="message" required><br>
-    <input type="button" value="submit" ng-click="insertdata()"/>
-    </form>
-    <h1 id= 'list'class="h1list">List of chirps</h1> 
-      <div id='rows'>
-          
-         <div   ng-repeat='chirps in allChirps' ng-click="goToSingle(chirps.id)" id={{chirp.id}}>   
-   
-    <a href ='#single'><p ng-dblclick="id">USER: {{chirps.user}}</p>
-        
-     <p>MESSAGE: {{chirps.message}} </p></a>
-    </div> 
-      </div>
-</div>
-</body>
-</html>
+<body>
+    <div ng-controller="allGetController">
+        <h1 class="chirper">Chirper!</h1>
+        <div class='input'>
+            <form>
+                <p class='inputprompt'>User:</p> <input class='box' type="text" name="User" placeholder="User" ng-model="user" required> 
+                <p class='inputprompt'>Message:</p> 
+                <input class='box' type="text" name="Message" placeholder="Message" ng-model="message" required><br>
+                <input class='submitbutton' type="button" value="Submit" ng-click="insertdata()" />
+            </form>
+        </div>
+        <!--<div class='chirplist'>-->
+        <h3 id='list' class="h1list">Recent Chirps!</h3>
+        <div id='rows'>
+
+            <div class='chirp' ng-repeat='chirps in allChirps' id={{chirp.id}}>
+                <h4>X</h4>
+                <a ng-click="goToSingle(chirps.id)" href='#single'>
+                    <p class='user'>USER: </p>
+                    <p class='username'>{{chirps.user}}</p>
+                    <p class='message'>CHIRP!:</p>
+                    <p class='messagetext'> {{   chirps.message}} </p>
+                </a>
+            </div>
+        </div>
+        <!--</div>-->
+    </div>
