@@ -1,63 +1,34 @@
+/* ----------------------------GENERAL-------------------------------------- */
 body{
-     /*background-color:black; */
      background-color: rgba(255,255,255,0.1);
      background-image: url( http://0.tqn.com/d/graphicssoft/1/7/l/G/5/SKS-Circles-16.png);
-    /*background-size: cover ;*/
 }     
 .box{
-    padding:.5% 5%
+   width: 30%;
 }
-h3#list{
-    text-align: center;
-    margin:0 auto;
-    color:#ffa500
+.messagetext{
+    margin-left: 3%;
+     word-wrap: break-word; 
+    background-color: white;
+    border-radius: 5px 5px;
+    padding: 1%;
+    background-color: rgba(175,238,238,0.7);
+    border-radius: 10px 10px;
+    border-left: 5px solid teal;
 }
-.welcome{
-    display: inline;
-    font-size: 3em;
-    color: #ffa500;
-
-    
+.messagetext:first-letter{
+  font-size: 2em;
+  /* font-weight: bold; */
+  font-style: italic;
 }
-
-h1.chirper{
-    margin:0 auto;
-    text-align: center;
-    font-size: 10em;
-    color: #ffa500;
+p{
+    font-size: 1.5em;
+    color:teal;
 }
- .title{
-    display: inline;
-    clear:right;
-    font-size: 8em 
-} 
-
-/* button{
-    display:block;
-    clear:right
-} */
-
-
-
-
-img{
-    border: 8px solid turquoise;
-    -ms-transform-origin-x: 1em;
-    margin-right: 1em;
-    margin-left:10em;
-    margin-top:5em;
-    clear:both;
-                border-radius: 500px;
-
+a:link{
+    text-decoration: none;
 }
-/*#rows :nth-child(even){
-    background-color: lightblue;
-}
-#rows :nth-child(odd){
-    background-color: lightgray
-}*/
 p.user{
-    /*background-color: lightblue;*/
     display: inline;
     border-radius: 5px 5px;
     color:#ffa500
@@ -65,44 +36,111 @@ p.user{
 p.message{
     max-width: 80%;
     color:#ffa500
+}
+hr.line{
+    transform: translate(-376px, 51px);
+color: #ffa500;
+    height: 0px; 
+    border: 5px solid #ffa500;
+    border-radius: 7px 9px;
+    width:55%;
+    display:block
     
-   
+
+}
+/* --------------------------------HOMEPAGE----------------------------------------- */
+.welcome{
+    display: inline;
+    font-size: 3em;
+    color: #ffa500; 
+}
+.title{
+    display: inline;
+    clear:right;
+    font-size: 1100% 
+} 
+
+img{
+    border: 10px solid turquoise;
+    -ms-transform-origin-x: 1em;
+    margin-right: 1em;
+    margin-left:13em;
+    margin-top:5em;
+    margin-bottom: 2em;
+    clear:both;
+    border-radius: 500px;
+    height:40%;
+    width:35%;
+      box-shadow: 
+	   0 0 0 2px #000,  
+	 0 0 0 3px #999,  
+	0 0 0 9px #fa0,
+	  0 0 0 10px #666,  
+	0 0 0 16px #fd0,
+	  0 0 0 18px #000;    
+}    
+.homebut{
+    display: block;
+    border-radius: 30px 30px;
+    font-size: 2em;
+    background-color:rgba(175,238,238,1);
+    color: teal;
+    transform: translate(410%, -430%);
+}
+div.home{
+    background-color: teal;
+    margin-top: 3em;
+    border-bottom: 4px solid turquoise;
+    border-top:4px solid turquoise;
+    width:100%;
+    box-shadow: 
+	   0 0 0 2px #000,  
+	 0 0 0 3px #999,  
+	0 0 0 9px #fa0,
+	  0 0 0 10px #666,  
+	0 0 0 16px #fd0,
+	  0 0 0 18px #000;    
+}
+.greeting{
+    float:right;
+    /* margin-right: 25%;
+    margin-top: 5%; */
+    color: #ffa500;
+    transform: translate(-55% ,40%)
+}
+/* -----------------------------------LISTPAGE------------------------------------- */
+h3#list{
+    text-align: center;
+    margin:0 auto;
+    color:#ffa500;
+    font-size: 3em;   
+}
+
+h1.chirper{
+    margin:0 auto;
+    text-align: center;
+    font-size: 10em;
+    color: #ffa500;
+    text-shadow: 5px 5px teal;
+
 }
 .username{
    background-color: rgba(175,238,238,0.7);
    display:inline;
    padding:.5%;
-       border-radius: 5px 5px;
-
-}
-.messagetext{
-    margin-left: 3%;
-    word-wrap: break-word;
-    background-color: white;
-    border-radius: 5px 5px;
-    padding: 1%;
-    background-color: rgba(175,238,238,0.7);
-            border-radius: 10px 10px;
-
-    
-}
-p{
-    font-size: 1.5em;
-    color:teal;
-    
+   border-radius: 5px 5px;
 }
 div.chirp:hover{
-background-color: rgba(77, 182, 172,1)}
+    background-color: rgba(77, 182, 172,1)}
 div.chirp{
-     background-color: teal;
+    background-color: teal;
     max-width: 60%;
     margin:1% auto;
     padding: 2%;
     border-radius: 30px 10px;
-background-color: rgba(77, 182, 172,0.7);
--webkit-transition: color 1s ease-in;
-                /*background-image: url(https://vignette3.wikia.nocookie.net/hexrblx/images/5/50/Wiki-background/revision/latest/scale-to-width-down/640?cb=20150222044922)*/
-
+    background-color: rgba(77, 182, 172,0.7);
+    border-left: 10px solid #ffa500
+   
 }
 form{
     padding:1em;
@@ -110,72 +148,54 @@ form{
     border-radius: 30px 10px;
     background-color: rgba(175,238,238,0.7);
     margin: 0 auto;
-                /*background-image: url(https://vignette3.wikia.nocookie.net/hexrblx/images/5/50/Wiki-background/revision/latest/scale-to-width-down/640?cb=20150222044922)*/
-
-}
-.homebut{
-    /* position:absolute;
-    top:70%;
-    left:50%; */
-    -webkit-transform-origin-x: 200px;
-    display: block;
-    margin-left: 65%;
-        border-radius: 30px 30px;
-        font-size: 2em;
-       background-color:rgba(175,238,238,1);
-       color: rgba(77, 182, 172,1)
-
-
-    
-}
-div.home{
-    background-color: teal;
-    margin-top: 3em;
-    border-bottom: 4px solid turquoise;
-    border-top:4px solid turquoise
-
-}
-.greeting{
-    /*max-width: 50%;*/
-    float:right;
-    margin-right: 15%;
-    margin-top: 5%;
-        color: #ffa500;
-
-
 }
 input{
     margin:1%
 }
 .input{
     padding: 1em 1em;
-    background-color: teal;
     text-align: center;
     max-width: 80%;
     margin: 1% auto;
     border-radius: 30px 10px;
     background-color: rgba(77, 182, 172,0.7);
+        border-bottom: 7px solid teal;
 }
 .inputprompt{
     display:inline
 }
-
 .submitbutton{
     margin:1% -1%;
     border-radius: 10px 10px;
     padding: .8%;
     font-size: 1.2em;
-    background-color: teal
+    background-color: teal;
+    width:25%
 }
 .chirplist{
     margin: 0 50%;
-    
 }
 h4{
     float:right;
+    font-size: 6em;
+    color: #ffa500;
+    transform: translate(23px, -51px);
 }
-a:link{
+img.tiny{
+    transform: translate(-282% ,-10%);
+width:93.1px;
+height:62.5px;
+margin-top:0;
+border: 5px solid turquoise;
+}
+user/name{
+     transform: translate(-282% ,-72%);
+}
+/* ------------------------------------SINGLEPAGE--------------------------------------- */
+.return{
+    text-align: center;
     text-decoration: none;
+    color:#ffa500;
 }
 .singlechirp:hover{
     background-color: rgba(77, 182, 172,1)
@@ -184,13 +204,15 @@ a:link{
     background-color: teal;
     margin-top: 4%;
     max-width: 80%;
-    margin:5% auto;
+    margin:2% auto;
     padding:2%;
     border-radius: 30px 10px;
     background-color: rgba(77, 182, 172,0.7);
+    border-left: 10px solid #ffa500
 }
-.return{
-    text-align: center;
-    text-decoration: none;
-    color:#ffa500;
+.small{
+    width:183px;
+    height:125px;
+    transform: translate(-9% ,-6%);
+    float:left
 }
