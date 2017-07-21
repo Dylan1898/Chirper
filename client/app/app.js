@@ -10,7 +10,6 @@ myApp.config(function ($routeProvider, $locationProvider) {
         .when("/single/:id", {
             templateUrl: "views/single.html"
         })
-
 });
 myApp.controller('allGetController', function ($scope, $http, $location, $routeParams) {
     $http.get("http://localhost:3000/api/chirps")
