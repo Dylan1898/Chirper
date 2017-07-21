@@ -30,15 +30,6 @@ myApp.controller('allGetController', function ($scope, $http, $location, $routeP
             });
     }
         $scope.deleteSingle = function (id) {
-                //  console.log('dbl')
-            // $location.path('/single/' + id)  
-                // data=$params={
-                //     user: $scope.user,
-                //     message: $scope.message,
-                //     id: $scope.id
-                //  }
-// console.log(data)
-                // console.log(id)
         $http.delete('/api/chirps/' + id )
         .success(function (data, status, headers, config) {
                 $http.get("http://localhost:3000/api/chirps")
@@ -46,13 +37,7 @@ myApp.controller('allGetController', function ($scope, $http, $location, $routeP
                         $scope.allChirps = response.data;
                     })
             });
-            // .then(function () {
-            //     $location.path('/single/' + id)
-            //     id = ($location.path('/single/' + id))
-            // })
-
          }
-        // $scope.deleteSingle=function(id){}
     $scope.goToSingle = function (id) {
         $http.get('/api/chirps/')
             .then(function () {
@@ -61,7 +46,7 @@ myApp.controller('allGetController', function ($scope, $http, $location, $routeP
             })
     }
 });
-myApp.controller('oneController', function ($scope, $routeParams, $http) {
+myApp.controller('oneController', function ($scope, $routeParams, $http, $location) {
     var currentId = $routeParams.id;
     console.log(currentId)
     $http.get("http://localhost:3000/api/chirps/" + currentId)
@@ -70,6 +55,17 @@ myApp.controller('oneController', function ($scope, $routeParams, $http) {
             console.log(location.hash)
             console.log(response.data)
         })
+        $scope.deleteSingle = function (id) {
+        $http.delete('/api/chirps/' + id )
+        
+        .success(function (data, status, headers, config) {
+                $http.get("http://localhost:3000/api/chirps")
+                    .then(function (response) {
+                        console.log('working')
+                        $location.path("/list/")
+                    })
+            });
+         }
 });
    
          
